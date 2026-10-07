@@ -1,0 +1,16 @@
+{
+  "name": "digital-library",
+  "version": "1.0.0",
+  "description": "3D first-person Library Management System",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "cd client && npm install && npm run build",
+    "check-catalog": "node server/catalog/check.js",
+    "reset-db": "node -e \"require('fs').rmSync('server/library.db',{force:true});console.log('Database reset. It will be re-created on next start.')\""
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "sql.js": "^1.11.0"
+  }
+}
